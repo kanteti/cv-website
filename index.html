@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srikanth Kanteti - Senior Software Engineer & Application Architect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        
+        .cv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 30px rgba(0,0,0,0.15);
+            overflow: hidden;
+            border-radius: 8px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header .title {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .download-section {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .download-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .download-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .download-btn span:first-child {
+            font-size: 1.2em;
+        }
+        
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+        
+        .contact-item a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        
+        .main-content {
+            display: flex;
+        }
+        
+        .left-column {
+            background: #34495e;
+            color: white;
+            width: 30%;
+            padding: 40px 30px;
+        }
+        
+        .right-column {
+            width: 70%;
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section h2 {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            color: #2c3e50;
+        }
+        
+        .left-column .section h2 {
+            color: #ecf0f1;
+            border-bottom-color: #3498db;
+        }
+        
+        .experience-item {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+        }
+        
+        .job-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .company {
+            font-weight: 500;
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+        
+        .duration {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .responsibilities {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .responsibilities li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .responsibilities li:before {
+            content: "▸";
+            color: #3498db;
+            position: absolute;
+            left: 0;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .skill-category {
+            margin-bottom: 20px;
+        }
+        
+        .skill-category h3 {
+            color: #ecf0f1;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            padding: 5px 0;
+            color: #bdc3c7;
+        }
+        
+        .professional-summary {
+            background: #f8f9fa;
+            padding: 25px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 35px;
+            font-style: italic;
+            color: #2c3e50;
+        }
+        
+        .education-item {
+            margin-bottom: 20px;
+        }
+        
+        .degree {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .institution {
+            color: #3498db;
+            margin-bottom: 5px;
+        }
+        
+        .year {
+            color: #7f8c8d;
+        }
+        
+        .certifications {
+            list-style: none;
+        }
+        
+        .certifications li {
+            padding: 8px 0;
+            color: #bdc3c7;
+            border-bottom: 1px solid #4a5f7a;
+        }
+        
+        .certifications li:last-child {
+            border-bottom: none;
+        }
+        
+        @media print {
+            body {
+                background: white !important;
+                padding: 0;
+                min-height: auto;
+            }
+            
+            .cv-container {
+                box-shadow: none;
+                max-width: none;
+                border-radius: 0;
+                margin: 0;
+            }
+            
+            .download-section {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .left-column, .right-column {
+                width: 100%;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .download-btn {
+                width: 200px;
+                justify-content: center;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header">
+            <h1>Srikanth Kanteti</h1>
+            <div class="title">Senior Software Engineer & Application Architect</div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:sri.cv@hotmail.com" style="color: white; text-decoration: none;">sri.cv@hotmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>07543264643</span>
+                </div>
+                <div class="contact-item">
+                    <span>🌐</span>
+                    <a href="https://linkedin.com/in/azsri" target="_blank" style="color: white; text-decoration: none;">linkedin.com/in/azsri</a>
+                </div>
+                <div class="contact-item">
+                    <span>🔒</span>
+                    <span>Security Cleared</span>
+                </div>
+            </div>
+            
+            <div class="download-section">
+                <h3 style="margin-bottom: 15px; font-size: 1.1em; opacity: 0.9;">Download CV</h3>
+                <div class="download-buttons">
+                    <a href="srikanth-kanteti-cv.pdf" class="download-btn pdf-btn" download>
+                        <span>📄</span>
+                        <span>Download PDF</span>
+                    </a>
+                    <a href="srikanth-kanteti-cv.docx" class="download-btn word-btn" download>
+                        <span>📝</span>
+                        <span>Download Word</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="left-column">
+                <div class="section">
+                    <h2>Technical Skills</h2>
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <ul class="skill-list">
+                            <li>Python</li>
+                            <li>Go</li>
+                            <li>C# (.NET)</li>
+                            <li>JavaScript/TypeScript</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Frameworks & Technologies</h3>
+                        <ul class="skill-list">
+                            <li>Microservices Architecture</li>
+                            <li>REST APIs</li>
+                            <li>ASP.NET Core</li>
+                            <li>WPF</li>
+                            <li>React</li>
+                            <li>Docker/Kubernetes</li>
+                            <li>Linux (RHEL, Ubuntu)</li>
+                            <li>RSyslog</li>
+                            <li>Git</li>
+                            <li>Azure</li>
+                            <li>AWS</li>
+                            <li>RabbitMQ</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Databases</h3>
+                        <ul class="skill-list">
+                            <li>SQL Server</li>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Security & Compliance</h3>
+                        <ul class="skill-list">
+                            <li>Secure by Design Principles</li>
+                            <li>SECRET-level Classification</li>
+                            <li>NCSC Compliance</li>
+                            <li>SBOM Compliance</li>
+                            <li>Syslog Integration (SOC/SIEM/LogRhythm)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Certifications</h2>
+                    <ul class="certifications">
+                        <li>Salesforce Admin Certification</li>
+                        <li>Terraform Certification</li>
+                        <li>Kubernetes Application Developer</li>
+                        <li>RHCSA Rapid Track Course</li>
+                        <li>Microsoft Certified Professional Developer (MCPD) - .Net Development</li>
+                        <li>Microsoft Certified Technology Specialist (MCTS) - SharePoint Development</li>
+                        <li>Microsoft Certified Solution Developer (MCSD)</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Education</h2>
+                    <ul class="certifications">
+                        <li>Graduate Degree in Computer Science (B.SC Computer Science)</li>
+                        <li>Post Graduate Diploma In Computer Applications</li>
+                        <li>Advance Web Development Methods & Security Training Hands On</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Community Involvement</h2>
+                    <ul class="certifications">
+                        <li>Free IT Support & development to Non Profit Organisations</li>
+                        <li>Raised £500 for British Heart Foundation, Cycling from London - Brighton</li>
+                        <li>Supporting small farmers in India adopting IoT technology for modern farming methods</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="professional-summary">
+                    <strong>Professional Summary:</strong> Seasoned Senior Software Engineer with extensive experience in enterprise application development and secure government systems. Specialized in architecting and delivering high-assurance communication platforms for critical government infrastructure, consistently adhering to Secure by Design Principles throughout the development lifecycle. Extensive expertise spans secure email communication, messaging, file transfer, web and desktop applications, and classified systems handling data up to SECRET level.
+                </div>
+
+                <div class="section">
+                    <h2>Professional Experience</h2>
+                    
+                    <div class="experience-item">
+                        <div class="job-title">Senior Software Engineer – HERMES Secure Collaboration Platform</div>
+                        <div class="company">FCDO Services (Contract)</div>
+                        <div class="duration">Jan 2021 - Present (4 years)</div>
+                        <p style="margin-bottom: 15px; color: #2c3e50; line-height: 1.6;">Architected, developed, and successfully delivered secure email communication, file transfer, and syslogging capabilities for the UK Government's HERMES platform — a high-assurance communication system supporting the MOD and the GCAP programme.</p>
+                        <ul class="responsibilities">
+                            <li>Architected and implemented end-to-end secure message handling for email and file transfers, passing rigorous audits with zero vulnerabilities</li>
+                            <li>Built a high-throughput syslogging system processing 20M+ messages/day from Windows, Linux, and appliances in air-gapped systems using data diodes, integrated with SOC, SIEM, and LogRhythm for real-time threat monitoring</li>
+                            <li>Developed distributed microservices in Python, Go, and C#, deployed using Docker containers and Kubernetes orchestration, with RabbitMQ handling secure inter-service communication, adhering to Secure by Design Principles with hardened CI/CD pipelines and SBOM compliance</li>
+                            <li>Implemented secure air-gapped network communication protocols enabling classified data transfer across UK and international partner networks, handling data from OFFICIAL–SENSITIVE to SECRET classification levels</li>
+                            <li>Platform reached Initial Operating Capability in 2022 and remains a critical component of UK secure communications infrastructure</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="job-title">Senior Software Engineer – UKVI</div>
+                        <div class="company">FCDO Services (Contract)</div>
+                        <div class="duration">2012 - 2021 (9 years)</div>
+                        <p style="margin-bottom: 15px; color: #2c3e50; line-height: 1.6;">Developed comprehensive web portal and case working tools for UK Visas and Immigration, serving millions of visa applicants and immigration officials across global operations.</p>
+                        <ul class="responsibilities">
+                            <li>Architected and developed a scalable appointment booking system handling thousands of daily visa appointments across multiple UK visa application centres worldwide</li>
+                            <li>Implemented secure Immigration Health Surcharge (IHS) integration with payment processing, ensuring compliance with UK government financial regulations</li>
+                            <li>Developed enterprise-grade authentication and authorization using Azure Entra ID and SAML2, enabling secure single sign-on across multiple government systems</li>
+                            <li>Developed modern responsive web applications using C#, React, Web API, ASP.NET Core, and Entity Framework Core, successfully modernizing and replacing legacy WPF desktop applications</li>
+                            <li>Implemented Azure IoT integration across global locations for real-time appliance monitoring and health management, with automated alarm escalation through ServiceNow for proactive maintenance and incident response</li>
+                            <li>Delivered case management tools used by immigration officers for processing visa applications, significantly improving processing efficiency and decision-making workflows</li>
+                            <li>Ensured platform scalability and high availability to support UK's global visa operations serving millions of applicants annually</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Additional Experience</h2>
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em; border: 1px solid #ddd;">
+                        <thead>
+                            <tr style="background-color: #f8f9fa; border-bottom: 2px solid #3498db;">
+                                <th style="padding: 12px 8px; text-align: left; color: #2c3e50; font-weight: 600; border-right: 1px solid #ddd;">Period</th>
+                                <th style="padding: 12px 8px; text-align: left; color: #2c3e50; font-weight: 600; border-right: 1px solid #ddd;">Role & Employer</th>
+                                <th style="padding: 12px 8px; text-align: left; color: #2c3e50; font-weight: 600; border-right: 1px solid #ddd;">Location</th>
+                                <th style="padding: 12px 8px; text-align: left; color: #2c3e50; font-weight: 600;">Technologies / Details</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 10px 8px; color: #555; border-right: 1px solid #eee; vertical-align: top;">Jun 2011 - Oct 2012</td>
+                                <td style="padding: 10px 8px; border-right: 1px solid #eee; vertical-align: top;">SharePoint Consultant<br><strong style="color: #3498db;">West Midlands Police</strong></td>
+                                <td style="padding: 10px 8px; color: #666; border-right: 1px solid #eee; vertical-align: top;">Birmingham</td>
+                                <td style="padding: 10px 8px; color: #666; vertical-align: top;">SharePoint 2010, JavaScript, C# Web Parts</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 10px 8px; color: #555; border-right: 1px solid #eee; vertical-align: top;">Aug 2006 - May 2011</td>
+                                <td style="padding: 10px 8px; border-right: 1px solid #eee; vertical-align: top;">.Net Consultant<br><strong style="color: #3498db;">Focus Data Services</strong></td>
+                                <td style="padding: 10px 8px; color: #666; border-right: 1px solid #eee; vertical-align: top;">Oxford, Bristol, LEAS, Police forces, London</td>
+                                <td style="padding: 10px 8px; color: #666; vertical-align: top;">C#, SQL Server, JavaScript, Bootstrap</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 10px 8px; color: #555; border-right: 1px solid #eee; vertical-align: top;">Apr 2005 - Jul 2006</td>
+                                <td style="padding: 10px 8px; border-right: 1px solid #eee; vertical-align: top;">.Net Consultant<br><strong style="color: #3498db;">XANSA - LSE, DDP Office</strong></td>
+                                <td style="padding: 10px 8px; color: #666; border-right: 1px solid #eee; vertical-align: top;">Northampton, London</td>
+                                <td style="padding: 10px 8px; color: #666; vertical-align: top;">C#, JavaScript, SOAP Web services, Oracle, SQL Server Integration with Java</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 10px 8px; color: #555; border-right: 1px solid #eee; vertical-align: top;">Jan 2004 - Mar 2005</td>
+                                <td style="padding: 10px 8px; border-right: 1px solid #eee; vertical-align: top;">VB, .Net Consultant<br><strong style="color: #3498db;">Cable &amp; Wireless – BT WLR, Bulldog</strong></td>
+                                <td style="padding: 10px 8px; color: #666; border-right: 1px solid #eee; vertical-align: top;">Birmingham, London</td>
+                                <td style="padding: 10px 8px; color: #666; vertical-align: top;">C#, JavaScript, Web, SQL Server services, Integration with BT</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 10px 8px; color: #555; border-right: 1px solid #eee; vertical-align: top;">Nov 2002 - Dec 2003</td>
+                                <td style="padding: 10px 8px; border-right: 1px solid #eee; vertical-align: top;">Senior Programmer<br><strong style="color: #3498db;">FX Corporation - Currency/Exchange Trading</strong></td>
+                                <td style="padding: 10px 8px; color: #666; border-right: 1px solid #eee; vertical-align: top;">London, Edinburgh</td>
+                                <td style="padding: 10px 8px; color: #666; vertical-align: top;">Java EJB, ASP, VB6, JavaScript, Oracle, SQL Server</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 10px 8px; color: #555; border-right: 1px solid #eee; vertical-align: top;">Sept 2001 - Oct 2002</td>
+                                <td style="padding: 10px 8px; border-right: 1px solid #eee; vertical-align: top;">Senior Programmer<br><strong style="color: #3498db;">National Grid</strong></td>
+                                <td style="padding: 10px 8px; color: #666; border-right: 1px solid #eee; vertical-align: top;">Warwick Tech Park</td>
+                                <td style="padding: 10px 8px; color: #666; vertical-align: top;">ASP, VB6, JavaScript, Oracle DB</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 10px 8px; color: #555; border-right: 1px solid #eee; vertical-align: top;">Jan 2000 - Aug 2001</td>
+                                <td style="padding: 10px 8px; border-right: 1px solid #eee; vertical-align: top;">Senior Programmer<br><strong style="color: #3498db;">BBC Good Homes</strong></td>
+                                <td style="padding: 10px 8px; color: #666; border-right: 1px solid #eee; vertical-align: top;">Sunderland Tech Park</td>
+                                <td style="padding: 10px 8px; color: #666; vertical-align: top;">ASP, JavaScript, ColdFusion, SQL Server</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <td style="padding: 10px 8px; color: #555; border-right: 1px solid #eee; vertical-align: top;">Jan 1998 - Dec 1999</td>
+                                <td style="padding: 10px 8px; border-right: 1px solid #eee; vertical-align: top;">Programmer<br><strong style="color: #3498db;">Monster Inc, With people.com</strong></td>
+                                <td style="padding: 10px 8px; color: #666; border-right: 1px solid #eee; vertical-align: top;">Noida Tech Park</td>
+                                <td style="padding: 10px 8px; color: #666; vertical-align: top;">EJB, JavaScript, JSP, HTML, Oracle DB</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px 8px; color: #555; border-right: 1px solid #eee; vertical-align: top;">Jan 1997 - Dec 1997</td>
+                                <td style="padding: 10px 8px; border-right: 1px solid #eee; vertical-align: top;">Programmer<br><strong style="color: #3498db;">Cool Crafters Inc.</strong></td>
+                                <td style="padding: 10px 8px; color: #666; border-right: 1px solid #eee; vertical-align: top;">Hyderabad</td>
+                                <td style="padding: 10px 8px; color: #666; vertical-align: top;">ASP, VB, SQL Server, JavaScript</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="section">
+                    <h2>Key Achievements</h2>
+                    <ul class="responsibilities">
+                        <li>Successfully delivered HERMES secure collaboration platform enabling classified communications between GCAP partner nations (UK, Japan, Italy)</li>
+                        <li>Architected high-throughput syslogging system processing 20M+ messages daily with zero security vulnerabilities using Secure by Design Principles</li>
+                        <li>Built scalable UKVI systems serving millions of visa applicants globally with enterprise-grade authentication and payment processing</li>
+                        <li>Maintained 13+ years of continuous UK government contracting with SECRET-level security clearance</li>
+                        <li>Demonstrated 27+ years of technology leadership across diverse sectors from early web development (1997) to modern cloud platforms</li>
+                        <li>Passed rigorous government security audits with zero critical vulnerabilities across classified systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
