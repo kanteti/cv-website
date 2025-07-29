@@ -8,6 +8,8 @@ Personal CV website showcasing my software engineering experience and expertise.
 Senior Software Engineer & Application Architect with 27+ years experience in enterprise application development and secure government systems.
 
 ## Technologies Used
-- HTML5/CSS3
-- Responsive Design
-- GitHub Pages Hosting
+- Python
+- Go
+- C#
+- Javascript/TS
+- DevOps
